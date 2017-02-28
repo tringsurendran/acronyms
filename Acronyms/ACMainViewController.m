@@ -80,26 +80,20 @@
     [[ACNetworkManager sharedInstance] getDetailsForAcronyms:self.textField.text completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         ACMainViewController *strongSelf = weakSelf;
         if (strongSelf) {
-            if (error) {
-                strongSelf.results = nil;
-                [strongSelf performSelectorOnMainThread:@selector(reloadData) withObject:nil waitUntilDone:NO];
+            strongSelf.results = nil;
+            if (!error) {
+                id result =  [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
+                if ([result isKindOfClass:[NSArray class]]) {
+                    NSMutableArray *objects = [NSMutableArray new];
+                    [result enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+                        [objects addObject:[[AcronymResultObject alloc] initWithDict:obj]];
+                    }];
+                    strongSelf.results = objects;
+                }
             }
-            NSString *string = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-            if (string) {
-                
-            }
-            id result =  [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
-            
-            if ([result isKindOfClass:[NSArray class]]) {
-                NSMutableArray *objects = [NSMutableArray new];
-                [result enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-                    [objects addObject:[[AcronymResultObject alloc] initWithDict:obj]];
-                }];
-                strongSelf.results = objects;
-                dispatch_sync(dispatch_get_main_queue(), ^{
-                    [strongSelf reloadData];
-                });
-            }
+            dispatch_sync(dispatch_get_main_queue(), ^{
+                [strongSelf reloadData];
+            });
         }
     }];
 }
