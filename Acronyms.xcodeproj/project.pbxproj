@@ -9,13 +9,15 @@
 /* Begin PBXBuildFile section */
 		49392BEC1E5F5216004C1B67 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 49392BEB1E5F5216004C1B67 /* main.m */; };
 		49392BEF1E5F5216004C1B67 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 49392BEE1E5F5216004C1B67 /* AppDelegate.m */; };
-		49392BF21E5F5216004C1B67 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49392BF11E5F5216004C1B67 /* ViewController.m */; };
+		49392BF21E5F5216004C1B67 /* ACMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49392BF11E5F5216004C1B67 /* ACMainViewController.m */; };
 		49392BF51E5F5216004C1B67 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49392BF31E5F5216004C1B67 /* Main.storyboard */; };
 		49392BF71E5F5216004C1B67 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49392BF61E5F5216004C1B67 /* Assets.xcassets */; };
 		49392BFA1E5F5216004C1B67 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49392BF81E5F5216004C1B67 /* LaunchScreen.storyboard */; };
 		49392C051E5F5216004C1B67 /* AcronymsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 49392C041E5F5216004C1B67 /* AcronymsTests.m */; };
 		49392C101E5F5216004C1B67 /* AcronymsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 49392C0F1E5F5216004C1B67 /* AcronymsUITests.m */; };
 		49392C1F1E5F656D004C1B67 /* AcronymResultObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 49392C1E1E5F656D004C1B67 /* AcronymResultObject.m */; };
+		49EB99D11E65CE5C0088886C /* ACNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EB99D01E65CE5C0088886C /* ACNetworkManager.m */; };
+		49EB99D41E65CEAC0088886C /* ACNetworkClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 49EB99D31E65CEAC0088886C /* ACNetworkClient.m */; };
 		7CBF509FBCAB2146A2F9E1C1 /* libPods-AcronymsUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F7D8A08B955D0C83E11BF97B /* libPods-AcronymsUITests.a */; };
 		9D007EA9D770F5677672F557 /* libPods-Acronyms.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 654FB106CA631CC9F5E4206F /* libPods-Acronyms.a */; };
 		A7E850F1BB8F3AA98E9B445C /* libPods-AcronymsTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 982CDBBD90D2F5280B3462B5 /* libPods-AcronymsTests.a */; };
@@ -46,8 +48,8 @@
 		49392BEB1E5F5216004C1B67 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		49392BED1E5F5216004C1B67 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		49392BEE1E5F5216004C1B67 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		49392BF01E5F5216004C1B67 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		49392BF11E5F5216004C1B67 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		49392BF01E5F5216004C1B67 /* ACMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ACMainViewController.h; sourceTree = "<group>"; };
+		49392BF11E5F5216004C1B67 /* ACMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ACMainViewController.m; sourceTree = "<group>"; };
 		49392BF41E5F5216004C1B67 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		49392BF61E5F5216004C1B67 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		49392BF91E5F5216004C1B67 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -60,6 +62,10 @@
 		49392C111E5F5216004C1B67 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		49392C1D1E5F656D004C1B67 /* AcronymResultObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AcronymResultObject.h; sourceTree = "<group>"; };
 		49392C1E1E5F656D004C1B67 /* AcronymResultObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AcronymResultObject.m; sourceTree = "<group>"; };
+		49EB99CF1E65CE5C0088886C /* ACNetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACNetworkManager.h; sourceTree = "<group>"; };
+		49EB99D01E65CE5C0088886C /* ACNetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACNetworkManager.m; sourceTree = "<group>"; };
+		49EB99D21E65CEAC0088886C /* ACNetworkClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACNetworkClient.h; sourceTree = "<group>"; };
+		49EB99D31E65CEAC0088886C /* ACNetworkClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACNetworkClient.m; sourceTree = "<group>"; };
 		561E352675AF6B66C0FBBD20 /* Pods-Acronyms.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Acronyms.release.xcconfig"; path = "Pods/Target Support Files/Pods-Acronyms/Pods-Acronyms.release.xcconfig"; sourceTree = "<group>"; };
 		654FB106CA631CC9F5E4206F /* libPods-Acronyms.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Acronyms.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DAFD2BC87CE3AD590226391 /* Pods-AcronymsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AcronymsUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AcronymsUITests/Pods-AcronymsUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -123,8 +129,8 @@
 			children = (
 				49392BED1E5F5216004C1B67 /* AppDelegate.h */,
 				49392BEE1E5F5216004C1B67 /* AppDelegate.m */,
-				49392BF01E5F5216004C1B67 /* ViewController.h */,
-				49392BF11E5F5216004C1B67 /* ViewController.m */,
+				49392BF01E5F5216004C1B67 /* ACMainViewController.h */,
+				49392BF11E5F5216004C1B67 /* ACMainViewController.m */,
 				49392BF31E5F5216004C1B67 /* Main.storyboard */,
 				49392BF61E5F5216004C1B67 /* Assets.xcassets */,
 				49392BF81E5F5216004C1B67 /* LaunchScreen.storyboard */,
@@ -132,6 +138,10 @@
 				49392BEA1E5F5216004C1B67 /* Supporting Files */,
 				49392C1D1E5F656D004C1B67 /* AcronymResultObject.h */,
 				49392C1E1E5F656D004C1B67 /* AcronymResultObject.m */,
+				49EB99CF1E65CE5C0088886C /* ACNetworkManager.h */,
+				49EB99D01E65CE5C0088886C /* ACNetworkManager.m */,
+				49EB99D21E65CEAC0088886C /* ACNetworkClient.h */,
+				49EB99D31E65CEAC0088886C /* ACNetworkClient.m */,
 			);
 			path = Acronyms;
 			sourceTree = "<group>";
@@ -465,10 +475,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				49392BF21E5F5216004C1B67 /* ViewController.m in Sources */,
+				49EB99D11E65CE5C0088886C /* ACNetworkManager.m in Sources */,
+				49392BF21E5F5216004C1B67 /* ACMainViewController.m in Sources */,
 				49392BEF1E5F5216004C1B67 /* AppDelegate.m in Sources */,
 				49392BEC1E5F5216004C1B67 /* main.m in Sources */,
 				49392C1F1E5F656D004C1B67 /* AcronymResultObject.m in Sources */,
+				49EB99D41E65CEAC0088886C /* ACNetworkClient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -704,6 +716,7 @@
 				49392C161E5F5216004C1B67 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		49392C171E5F5216004C1B67 /* Build configuration list for PBXNativeTarget "AcronymsTests" */ = {
 			isa = XCConfigurationList;
@@ -712,6 +725,7 @@
 				49392C191E5F5216004C1B67 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		49392C1A1E5F5216004C1B67 /* Build configuration list for PBXNativeTarget "AcronymsUITests" */ = {
 			isa = XCConfigurationList;
@@ -720,6 +734,7 @@
 				49392C1C1E5F5216004C1B67 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
