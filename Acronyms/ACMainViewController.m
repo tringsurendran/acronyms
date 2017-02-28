@@ -96,7 +96,9 @@
                     [objects addObject:[[AcronymResultObject alloc] initWithDict:obj]];
                 }];
                 strongSelf.results = objects;
-                [strongSelf performSelectorOnMainThread:@selector(reloadData) withObject:nil waitUntilDone:NO];
+                dispatch_sync(dispatch_get_main_queue(), ^{
+                    [strongSelf reloadData];
+                });
             }
         }
     }];
